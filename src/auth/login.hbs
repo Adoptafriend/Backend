@@ -1,0 +1,67 @@
+<main id="login-main">
+  <div class="container-fluid p-5">
+    <div
+      class="row p-1 h-100 d-flex align-content-center justify-content-start"
+    >
+      <div class="col-lg-4 offset-lg-1 col-md-7 col-sm-12">
+        <div class="card p-4 bg-light">
+          <h2 class="welcome text-center text-dark m-4">Welcome to Rubber Duck
+            House!</h2>
+          <p class="lead text-muted">
+            We store any size box so long as it's 24" x 20" x 18".
+          </p>
+          <div class="">
+            <form class="login-form" action="/auth/login" method="post">
+              <fieldset class="mt-3">
+                <legend class="text-dark">Login</legend>
+                {{#if info}}
+                  <div class="alert alert-dismissible alert-danger">
+                    <button
+                      type="button"
+                      class="btn-close d-flex align-items-center"
+                      data-bs-dismiss="alert"
+                    ><i class="bi bi-x-lg"></i></button>
+                    {{info.message}}
+                  </div>
+                {{/if}}
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    name="username"
+                    class="form-control text-dark"
+                    id="username"
+                    placeholder="Username"
+                    autofocus
+                    required
+                  />
+                  <label
+                    class="form-label text-dark"
+                    for="email"
+                  >Username</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="password"
+                    name="password"
+                    class="form-control text-dark"
+                    id="password"
+                    placeholder="Password"
+                    required
+                  />
+                  <label
+                    class="form-label text-dark"
+                    for="password"
+                  >Password</label>
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-warning w-100"
+                >Login</button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

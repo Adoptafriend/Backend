@@ -1,3 +1,9 @@
+.npmrc
+
+# sqlite3 database
+*.sqlite
+*.db
+
 # Logs
 logs
 *.log

@@ -1,0 +1,79 @@
+{
+  "name": "adoptafriend-backend",
+  "version": "1.0.0",
+  "description": "Pet adoption app.",
+  "type": "module",
+  "main": "src/server.js",
+  "nodemonConfig": {
+    "watch": [
+      "src/*"
+    ],
+    "ignore": [
+      "*.test.js",
+      "*.spec.js"
+    ]
+  },
+  "jest": {
+    "transform": {},
+    "testEnvironment": "node",
+    "moduleNameMapper": {
+      "#ansi-styles": "<rootDir>/node_modules/chalk/source/vendor/ansi-styles/index.js",
+      "#supports-color": "<rootDir>/node_modules/chalk/source/vendor/supports-color/index.js"
+    }
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "dotenv -v NODE_ENV=development nodemon --require dotenv/config src/server.js",
+    "test": "dotenv -v NODE_ENV=test -- node --experimental-vm-modules node_modules/jest/bin/jest.js --runInBand",
+    "test:report": "dotenv -v NODE_ENV=test -- node --require dotenv/config --experimental-vm-modules node_modules/jest/bin/jest.js --coverage=true --runInBand",
+    "test:watch": "dotenv -v NODE_ENV=test -- node --require dotenv/config --experimental-vm-modules node_modules/jest/bin/jest.js --watch",
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier -w src",
+    "seed:heroku": "node bin/seed.prod.js",
+    "seed": "node --require dotenv/config bin/seed.dev.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "17.1.x"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "chalk": "^5.0.0",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-rate-limit": "^6.0.3",
+    "express-validator": "^6.14.0",
+    "helmet": "^4.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "passport": "^0.5.2",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "pg": "^8.7.1",
+    "sequelize": "^6.12.0-alpha.1",
+    "serve-favicon": "^2.5.0",
+    "sqlite3": "^5.0.2",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "dotenv-cli": "^4.1.1",
+    "eslint": "^8.4.0",
+    "eslint-config-airbnb": "^19.0.2",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "jest": "^27.4.3",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1",
+    "supertest": "^6.1.6"
+  }
+}
