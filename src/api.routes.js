@@ -1,8 +1,9 @@
 import express from 'express';
-// import warehouseRoutes from './warehouse/warehouse.api.routes.js';
+
+import main from './main.route.js';
 
 const router = express.Router();
 
-// router.use('/warehouses', warehouseRoutes);
+router.use('/', main);
 
 export default router;
