@@ -11,9 +11,9 @@ const router = express.Router();
 router.use('/auth', authRoutes);
 // router.use(redirectToLogin);
 router.use('/api', apiRoutes);
-router.use('*', (req, res) => {
-  res.sendFile('/index.html');
-});
+// router.use('*', (req, res) => {
+//   res.sendFile('/index.html');
+// });
 // router.get('/*', (req, res) => {
 //   res.sendFile(path.join(__dirname, './public', 'index.html'));
 // });

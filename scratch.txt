@@ -1,0 +1,11 @@
+https://www.petfinder.com/search/?
+page=1&
+limit[]=40&
+status=adoptable&
+token=dk-JFNuaQ14dwuvzmBhwhQ0QnQY_wADR_OghivBY34w&
+distance[]=100&
+type[]=dogs&
+sort[]=nearest&
+location_slug[]=us%2Ftx%2F76039&
+include_transportable=true
+

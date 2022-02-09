@@ -39,7 +39,7 @@ main.get('/getPets', async (request, response) => {
   const sendGetRequest = async () => {
     try {
       const resp = await axios.get(
-        'https://api.petfinder.com/v2/animals?type=dog&page=2',
+        'https://api.petfinder.com/v2/animals?type=dog&page=1&limit=40&status=adoptable&location=76039',
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -49,7 +49,7 @@ main.get('/getPets', async (request, response) => {
 
       response.json(resp.data);
     } catch (err) {
-      // Handle Error Here
+      // Handle Error Heres
       // eslint-disable-next-line no-console
       console.error(err);
     }
