@@ -1,2 +1,2 @@
-release: npm run seed:heroku
+# release: npm run seed:heroku
 web: npm start
