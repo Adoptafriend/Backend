@@ -11,8 +11,8 @@ main.get('/pets', async (request, response) => {
     method: 'POST',
     headers: { 'content-type': 'application/x-www-form-urlencoded' },
     auth: {
-      username: 'S2T4zLSSGUPN91aPOonDpirUTKVhJEQ4T5d7TKDdgR0na0lmss',
-      password: '0Q0JBw3MSrRgFZjTFXXUN8y6j7v1PzCPZbffjZCZ',
+      username: process.env.CLIENT_ID || 'client_id',
+      password: process.env.CLIENT_SECRET || 'client_secret',
     },
     data: qs.stringify(data),
     url: 'https://api.petfinder.com/v2/oauth2/token',
@@ -66,8 +66,8 @@ main.get('/pets/:id', async (request, response) => {
     method: 'POST',
     headers: { 'content-type': 'application/x-www-form-urlencoded' },
     auth: {
-      username: 'S2T4zLSSGUPN91aPOonDpirUTKVhJEQ4T5d7TKDdgR0na0lmss',
-      password: '0Q0JBw3MSrRgFZjTFXXUN8y6j7v1PzCPZbffjZCZ',
+      username: process.env.CLIENT_ID || 'client_id',
+      password: process.env.CLIENT_SECRET || 'client_secret',
     },
     data: qs.stringify(data),
     url: 'https://api.petfinder.com/v2/oauth2/token',
