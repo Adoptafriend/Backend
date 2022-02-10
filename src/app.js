@@ -16,7 +16,6 @@ import routes from './routes.js';
 
 const app = express();
 app.set('trust proxy', process.env.NUM_OF_PROXIES);
-//app.get('/ip', (req, res) => res.send(req.ip));
 
 // app.engine('.hbs', handlebars.engine);
 // app.set('view engine', '.hbs');
